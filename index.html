@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#764ba2">
-    <title>Happy Birthday Preety ❤️</title>
+    <title>Happy Birthday Preety❤️</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -23,56 +24,72 @@
     Your browser does not support the audio element.
 </audio>
 
+<!-- Music Control Button -->
 <div class="music-control">
-    <button id="musicToggle" class="music-btn">
-        🎵
+    <button id="musicToggle" class="music-btn" aria-label="Toggle music">
+        <span id="musicIcon">🎵</span>
     </button>
 </div>
 
 <!-- ================= HERO SECTION ================= -->
-<section class="hero">
+<section class="hero" id="hero">
+    <div class="floating-elements">
+        <span class="floating-heart">💖</span>
+        <span class="floating-star">✨</span>
+        <span class="floating-heart">💕</span>
+        <span class="floating-star">⭐</span>
+        <span class="floating-heart">💗</span>
+        <span class="floating-star">🌟</span>
+    </div>
+
     <div class="hero-content">
-        <h1>Happy Birthday My ❤️</h1>
-        <p>You make my world brighter every single day, Mera Bachaa</p>
-        <span>✨ You're amazing, Preety ✨</span>
+        <h1 class="hero-title fade-in pulse-glow">Happy Birthday My ❤️</h1>
+        <p class="hero-subtitle fade-in-delay">
+            You make my world brighter every single day, Mera Bachaa
+        </p>
+        <div class="sparkle-text">✨ You're amazing, Preety ✨</div>
+    </div>
+
+    <div class="scroll-indicator">
+        <span>↓</span>
     </div>
 </section>
 
 <!-- ================= MEMORIES SECTION ================= -->
 <section class="memories" id="memories">
     <div class="container">
-        <h2>Our Beautiful Memories</h2>
+        <h2 class="section-title animated-title">Our Beautiful Memories</h2>
 
         <div class="gallery">
 
             <div class="gallery-item">
                 <img src="photo/IMG-20250208-WA0017.jpg" alt="Memory 1">
-                <p>Every moment with you is a treasure 💎</p>
+                <div class="gallery-caption">Every moment with you is a treasure 💎</div>
             </div>
 
             <div class="gallery-item">
                 <img src="photo/111.jpeg" alt="Memory 2">
-                <p>Your smile lights up my world ✨</p>
+                <div class="gallery-caption">Your smile lights up my world ✨</div>
             </div>
 
             <div class="gallery-item">
                 <img src="photo/IMG_20250208_223430.jpg" alt="Memory 3">
-                <p>Together we create magic 🌟</p>
+                <div class="gallery-caption">Together we create magic 🌟</div>
             </div>
 
             <div class="gallery-item">
                 <img src="photo/22222.jpeg" alt="Memory 4">
-                <p>Forever grateful for you 💕</p>
+                <div class="gallery-caption">Forever grateful for you 💕</div>
             </div>
 
             <div class="gallery-item">
                 <img src="photo/33333.jpeg" alt="Memory 5">
-                <p>You are my favorite person 🌸</p>
+                <div class="gallery-caption">You are my favorite person 🌸</div>
             </div>
 
             <div class="gallery-item">
                 <img src="photo/555555....jpeg" alt="Memory 6">
-                <p>Love grows stronger every day 💖</p>
+                <div class="gallery-caption">Love grows stronger every day 💖</div>
             </div>
 
         </div>
@@ -80,76 +97,90 @@
 </section>
 
 <!-- ================= LOVE LETTER ================= -->
-<section class="love-letter">
+<section class="love-letter" id="love-letter">
     <div class="container">
-        <h2>A Letter From My Heart</h2>
-
-        <p>Dear Preety,</p>
-        <p>
-            I may not say this every day, but you mean more to me than words can explain.
-            Thank you for being my happiness, my strength, and my safe place.
-        </p>
-        <p>
-            Every moment with you is special, and on your birthday,
-            I just want to remind you how deeply loved you are.
-        </p>
-        <p><strong>Forever yours ❤️</strong></p>
-    </div>
-</section>
-
-<!-- ================= TIMELINE ================= -->
-<section class="timeline">
-    <div class="container">
-        <h2>Our Journey Together</h2>
-
-        <ul>
-            <li>The day we met 💫</li>
-            <li>Our first long talk 💬</li>
-            <li>Our best memories ❤️</li>
-            <li>Today — Preety’s Birthday 🎂</li>
-        </ul>
-    </div>
-</section>
-
-<!-- ================= SURPRISE ================= -->
-<section class="surprise">
-    <div class="container">
-        <h2>A Special Surprise 🎁</h2>
-        <button id="surpriseBtn">Click for Surprise</button>
-
-        <div id="surpriseMessage" style="display:none;">
-            <h3>I love you, Butki ❤️ Always</h3>
-            <p>You mean everything to me 💕</p>
+        <div class="letter-card">
+            <h2 class="letter-title">A Letter From My Heart</h2>
+            <div class="letter-content">
+                <p>Dear Preety,</p>
+                <p>I may not say this every day, but you mean more to me than words can explain.</p>
+                <p>Thank you for being my happiness, my strength, and my safe place.</p>
+                <p>
+                    Every day with you is a gift, and today, on your special day,
+                    I want you to know how incredibly loved you are.
+                </p>
+                <p class="letter-signature">With all my love,<br>Forever yours ❤️</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-    <p>Made with ❤️ for Preety</p>
+<!-- ================= TIMELINE ================= -->
+<section class="timeline" id="timeline">
+    <div class="container">
+        <h2 class="section-title animated-title">Our Journey Together</h2>
+
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>The day we met 💫</h3>
+                    <p>A moment that changed everything</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Our first long talk 💬</h3>
+                    <p>When I knew you were special</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Our best memory together ❤️</h3>
+                    <p>Every moment with you becomes my favorite</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Today — Preety's birthday 🎂</h3>
+                    <p>Celebrating the amazing person you are</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SURPRISE ================= -->
+<section class="surprise" id="surprise">
+    <div class="container">
+        <h2 class="section-title animated-title">A Special Surprise</h2>
+        <button id="surpriseBtn" class="surprise-btn">Click for a Surprise 🎁</button>
+
+        <div id="surpriseMessage" class="surprise-message hidden">
+            <h3 class="love-message">I love you, Butki ❤️ Always</h3>
+            <p class="love-submessage">You mean everything to me, Kuttuuuuu 💕</p>
+        </div>
+    </div>
+</section>
+
+<!-- Confetti Canvas -->
+<canvas id="confettiCanvas"></canvas>
+
+<div id="floatingHearts"></div>
+<div id="sparkles"></div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>Made with ❤️ for Preety - The most special person in my life</p>
 </footer>
 
-<!-- ================= JAVASCRIPT ================= -->
 <script src="script.js"></script>
-
-<script>
-    const music = document.getElementById("backgroundMusic");
-    const toggle = document.getElementById("musicToggle");
-    const btn = document.getElementById("surpriseBtn");
-    const msg = document.getElementById("surpriseMessage");
-
-    toggle.addEventListener("click", () => {
-        if (music.paused) {
-            music.play();
-        } else {
-            music.pause();
-        }
-    });
-
-    btn.addEventListener("click", () => {
-        msg.style.display = "block";
-    });
-</script>
 
 </body>
 </html>
